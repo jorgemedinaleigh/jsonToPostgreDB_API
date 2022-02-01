@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SkxYaAvXxjTelWtdnfQyvjnULW48krVmCC1liA59Tx8=",
+  "Source": "orion_msdynamics_inbound_api",
+  "BasePath": "_content/orion_msdynamics_inbound_api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
