@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using NpgsqlTypes;
 using orion_msdynamics_inbound_api.Models;
 
 namespace orion_msdynamics_inbound_api.Data
@@ -20,10 +21,10 @@ namespace orion_msdynamics_inbound_api.Data
 
         public void AddCuenta(string cuenta)
         {
-            string commandText = @"insert into public.""AccountLogs""(""JsonFile"") values ('@file');";
+            string commandText = @"insert into public.""AccountLogs""(""JsonFile"") values (@file);";
             using (var cmd = new NpgsqlCommand(commandText, connection))
             {
-                cmd.Parameters.AddWithValue("file", cuenta);
+                cmd.Parameters.AddWithValue("file", NpgsqlDbType.Json, cuenta);
                 cmd.ExecuteNonQuery();
             }
         }

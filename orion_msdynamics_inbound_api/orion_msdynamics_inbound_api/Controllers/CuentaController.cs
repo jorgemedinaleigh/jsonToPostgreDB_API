@@ -15,8 +15,7 @@ namespace orion_msdynamics_inbound_api.Controllers
         [HttpPost]
         public void CuentaLogger(Cuenta cuenta)
         {
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string cuentaJson = JsonSerializer.Serialize(cuenta, options);
+            string cuentaJson = JsonSerializer.Serialize(cuenta);
             _cuentaRepository.AddCuenta(cuentaJson);
         }
     }
